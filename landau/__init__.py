@@ -5,5 +5,5 @@ except:
 
 __all__ = ['landau']
 
-from landau import gauss, landau, gauss_landau
+from landau import *
 
