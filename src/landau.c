@@ -22,15 +22,20 @@ static PyMethodDef module_methods[] = {
   {NULL, NULL, 0, NULL}
 };
 
+statuc struct PyModuleDef Landau =
+{
+  PyModuleDef_HEAD_INIT,
+  "_landau",
+  module_docstring,
+  -1,
+  module_methods
+};
+
 PyMODINIT_FUNC init_landau(void)
 {
-  PyObject *m = Py_InitModule3("_landau", module_methods, module_docstring);
-  if (m == NULL)
-    return;
-
   /* Load `numpy` functionality. */
   import_array();
-  return;
+  return PyModule_Create(&Landau);
 }
 
 static PyObject *landau_gauss(PyObject *self, PyObject *args)
