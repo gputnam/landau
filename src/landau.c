@@ -31,7 +31,7 @@ static struct PyModuleDef Landau =
   module_methods
 };
 
-PyMODINIT_FUNC init_landau(void)
+PyMODINIT_FUNC PyInit__landau(void)
 {
   /* Load `numpy` functionality. */
   import_array();
