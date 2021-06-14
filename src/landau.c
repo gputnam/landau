@@ -22,7 +22,7 @@ static PyMethodDef module_methods[] = {
   {NULL, NULL, 0, NULL}
 };
 
-statuc struct PyModuleDef Landau =
+static struct PyModuleDef Landau =
 {
   PyModuleDef_HEAD_INIT,
   "_landau",
